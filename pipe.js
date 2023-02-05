@@ -1,7 +1,12 @@
 
 function Pipe() {
-  this.top = random(height/2);
-  this.bottom = random(height/2);
+
+  var spacing = random(20, height / 2);
+  var centery = random(spacing, height-spacing);
+
+  this.top = centery - spacing / 2;
+  this.bottom = height - (centery + spacing / 2);
+  console.log(this.top);
   this.x = width;
   this.w = 20;
   this.speed = 2;
@@ -22,7 +27,7 @@ function Pipe() {
   this.show = function() {
     fill(255);
     if (this.highlight) {
-      fill(255, 0, 0); // red
+      fill(255, 0, 0);
     }
     rect(this.x, 0, this.w, this.top);
     rect(this.x, height-this.bottom, this.w, this.bottom);
