@@ -1,14 +1,14 @@
 
 function Pipe() {
 
-  var spacing = random(20, height / 2);
+  var spacing = random(50, height / 2);
   var centery = random(spacing, height-spacing);
 
   this.top = centery - spacing / 2;
   this.bottom = height - (centery + spacing / 2);
   console.log(this.top);
   this.x = width;
-  this.w = 20;
+  this.w = 50;
   this.speed = 2;
 
   this.highlight = false;
